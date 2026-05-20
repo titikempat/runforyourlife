@@ -792,9 +792,9 @@ nomorWA = "62" + nomorWA.substring(1);
 // PESAN WHATSAPP
 // ======================================
 
-const pesanWA = encodeURIComponent(`
+const pesanWA = encodeURIComponent(
 
-✅ REGISTRASI BERHASIL
+`✅ REGISTRASI BERHASIL
 
 RUN FOR YOUR LIFE 2026
 
@@ -807,20 +807,18 @@ Bank Jatim
 0162123456
 
 Silakan lakukan pembayaran lalu upload bukti transfer melalui link dibawah.
+https://forms.gle/ISI_LINK_KONFIRMASI_KAMU
 
-📤 Konfirmasi Pembayaran:
-${konfirmasiLink}
+Terima kasih 🙏`
 
-Terima kasih 🙏
-
-`);
+);
 
 // ======================================
 // LINK WA
 // ======================================
 
 const waLink =
-`https://wa.me/${nomorWA}?text=${pesanWA}`;
+https://wa.me/${nomorWA}?text=${pesanWA};
 
 // ======================================
 // LINK KONFIRMASI
@@ -890,6 +888,25 @@ margin-bottom:12px;
 📩 Kirim Detail Registrasi ke WhatsApp Saya
 
 </a>
+
+<a
+href="${konfirmasiLink}"
+target="_blank"
+style="
+display:block;
+text-decoration:none;
+background:#f6c453;
+color:#06152d;
+padding:16px;
+border-radius:14px;
+text-align:center;
+font-weight:700;
+">
+
+📤 Konfirmasi Pembayaran
+
+</a>
+
 </div>
 
 `;
