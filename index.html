@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RUN FOR YOUR LIFE 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#06152d;
+    color:white;
+    padding:20px;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    background:#0d2347;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 0 40px rgba(0,0,0,0.5);
+}
+
+.banner{
+    width:100%;
+    height:320px;
+    background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=1600');
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+.banner-content{
+    position:absolute;
+    bottom:30px;
+    left:30px;
+}
+
+.banner-content h1{
+    font-size:52px;
+    color:#f6c453;
+    line-height:1;
+    font-weight:700;
+}
+
+.banner-content p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+.form-section{
+    padding:30px;
+}
+
+.info-box{
+    background:#132f5e;
+    padding:22px;
+    border-radius:18px;
+    margin-bottom:30px;
+    line-height:1.9;
+}
+
+.section-title{
+    color:#f6c453;
+    margin-bottom:25px;
+    font-size:25px;
+    border-left:5px solid #f6c453;
+    padding-left:12px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-group label{
+    margin-bottom:8px;
+    font-weight:500;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+    padding:14px;
+    border:none;
+    border-radius:14px;
+    background:#132f5e;
+    color:white;
+    font-size:15px;
+}
+
+.input-group textarea{
+    resize:none;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder{
+    color:#ccc;
+}
+
+.full{
+    grid-column:1/3;
+}
+
+button{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:#f6c453;
+    color:#06152d;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.02);
+}
+
+button:disabled{
+    opacity:0.7;
+    cursor:not-allowed;
+}
+
+.success{
+    display:none;
+    margin-top:30px;
+    background:#10391e;
+    padding:25px;
+    border-radius:16px;
+}
+
+.success h2{
+    color:#6effa7;
+    margin-bottom:15px;
+}
+
+.loading{
+    display:none;
+    margin-top:20px;
+    text-align:center;
+    color:#f6c453;
+    font-size:16px;
+}
+
+.hidden{
+    display:none;
+}
+
+.note{
+    margin-top:10px;
+    font-size:13px;
+    color:#f6c453;
+}
+
+@media(max-width:768px){
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+.full{
+    grid-column:auto;
+}
+
+.banner{
+    height:240px;
+}
+
+.banner-content h1{
+    font-size:34px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="banner">
+
+<div class="banner-content">
+<h1>RUN FOR YOUR LIFE 2026</h1>
+<p>MOJO HEALTH FEST 2026</p>
+</div>
+
+</div>
+
+<div class="form-section">
+
+<div class="info-box">
+
+📍 Taman Bahari Mojopahit Kota Mojokerto<br>
+📅 27 September 2026<br>
+⏰ Start 06.00 WIB<br>
+🏃 Kategori 3K & 5K
+
+</div>
+
+<h2 class="section-title">
+FORM REGISTRASI PESERTA
+</h2>
+
+<form id="registerForm">
+
+<div class="grid">
+
+<!-- NAMA -->
+<div class="input-group">
+<label>Nama Lengkap</label>
+<input type="text" name="namaLengkap" required>
+</div>
+
+<!-- NIK -->
+<div class="input-group">
+
+<label>NIK</label>
+
+<input
+type="text"
+name="nik"
+id="nik"
+maxlength="16"
+pattern="[0-9]{16}"
+placeholder="16 digit NIK"
+required>
+
+<div class="note">
+Tanggal lahir otomatis terbaca dari NIK
+</div>
+
+</div>
+
+<!-- NAMA BIB -->
+<div class="input-group">
+<label>Nama BIB</label>
+<input type="text" name="namaBib" required>
+</div>
+
+<!-- TANGGAL LAHIR -->
+<div class="input-group">
+
+<label>Tanggal Lahir</label>
+
+<input
+type="date"
+name="tanggalLahir"
+id="tanggalLahir"
+required>
+
+</div>
+
+<!-- JK -->
+<div class="input-group">
+
+<label>Jenis Kelamin</label>
+
+<select name="jenisKelamin" required>
+
+<option value="">Pilih</option>
+<option value="Laki-laki">Laki-laki</option>
+<option value="Perempuan">Perempuan</option>
+
+</select>
+
+</div>
+
+<!-- WA -->
+<div class="input-group">
+
+<label>Nomor WhatsApp</label>
+
+<input
+type="text"
+name="wa"
+placeholder="08xxxxxxxxxx"
+required>
+
+</div>
+
+<!-- EMAIL -->
+<div class="input-group">
+<label>Email</label>
+<input type="email" name="email" required>
+</div>
+
+<!-- KOTA -->
+<div class="input-group">
+<label>Kota Asal</label>
+<input type="text" name="kota" required>
+</div>
+
+<!-- KATEGORI -->
+<div class="input-group">
+
+<label>Kategori</label>
+
+<select name="kategori" id="kategori" required>
+
+<option value="">Pilih</option>
+<option value="3K">3K</option>
+<option value="5K">5K</option>
+
+</select>
+
+</div>
+
+<!-- BATCH -->
+<div class="input-group">
+
+<label>Batch</label>
+
+<select name="batch" id="batch" required>
+<option value="">Pilih Batch</option>
+</select>
+
+<div class="note">
+* Earlybird otomatis tertutup sesuai tanggal
+</div>
+
+</div>
+
+<!-- HARGA -->
+<div class="input-group">
+
+<label>Total Pembayaran</label>
+
+<input
+type="text"
+id="harga"
+name="harga"
+readonly>
+
+</div>
+
+<!-- JERSEY -->
+<div class="input-group">
+
+<label>Ukuran Jersey</label>
+
+<select name="jersey" required>
+
+<option value="">Pilih</option>
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+
+</select>
+
+</div>
+
+<!-- KOMUNITAS -->
+<div class="input-group">
+
+<label>Peserta</label>
+
+<select name="komunitas" id="komunitas" required>
+
+<option value="">Pilih</option>
+<option value="Umum">Umum</option>
+<option value="Komunitas">Komunitas</option>
+
+</select>
+
+</div>
+
+<!-- NAMA KOMUNITAS -->
+<div
+class="input-group full hidden"
+id="komunitasBox">
+
+<label>Nama Komunitas</label>
+
+<input
+type="text"
+name="namaKomunitas"
+id="namaKomunitas">
+
+</div>
+
+<!-- GOLDAR -->
+<div class="input-group">
+
+<label>Golongan Darah</label>
+
+<select name="goldar">
+
+<option value="">Pilih</option>
+<option>A</option>
+<option>B</option>
+<option>AB</option>
+<option>O</option>
+
+</select>
+
+</div>
+
+<!-- KONTAK -->
+<div class="input-group">
+
+<label>Kontak Darurat</label>
+
+<input
+type="text"
+name="kontakDarurat">
+
+</div>
+
+<!-- RIWAYAT -->
+<div class="input-group full">
+
+<label>Riwayat Penyakit</label>
+
+<textarea
+rows="4"
+name="riwayat"></textarea>
+
+</div>
+
+<!-- PEMBAYARAN -->
+<div class="input-group">
+
+<label>Metode Pembayaran</label>
+
+<select name="metodeBayar" required>
+
+<option value="">Pilih</option>
+<option value="Transfer Bank">Transfer Bank</option>
+<option value="QRIS">QRIS</option>
+
+</select>
+
+</div>
+
+<!-- AGREEMENT -->
+<div class="input-group full">
+
+<label>
+
+<input type="checkbox" required>
+
+Saya menyetujui syarat dan ketentuan event
+
+</label>
+
+</div>
+
+<!-- BUTTON -->
+<div class="full">
+
+<button type="submit" id="submitBtn">
+DAFTAR SEKARANG
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+<!-- LOADING -->
+<div class="loading" id="loading">
+⏳ Sedang mengirim data...
+</div>
+
+<!-- SUCCESS -->
+<div class="success" id="successBox">
+
+<h2>✅ REGISTRASI BERHASIL</h2>
+
+<p id="successText"></p>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+// ======================================
+// ELEMENT
+// ======================================
+
+const kategori =
+document.getElementById("kategori");
+
+const batch =
+document.getElementById("batch");
+
+const harga =
+document.getElementById("harga");
+
+const komunitas =
+document.getElementById("komunitas");
+
+const komunitasBox =
+document.getElementById("komunitasBox");
+
+const submitBtn =
+document.getElementById("submitBtn");
+
+const nikInput =
+document.getElementById("nik");
+
+const tanggalLahirInput =
+document.getElementById("tanggalLahir");
+
+// ======================================
+// URL WEB APP
+// ======================================
+
+const WEBAPP_URL =
+"https://script.google.com/macros/s/AKfycbwr5NReGwYtYWt7hvx4Kw_LwAEZ2d0hVj3WGUPxfYzDXfFO8tno8w-PBO026at7ZNAcaw/exec";
+
+// ======================================
+// EARLYBIRD DATE
+// ======================================
+
+const earlybirdEnd =
+new Date("2026-07-31");
+
+// ======================================
+// GENERATE BATCH
+// ======================================
+
+function generateBatch(){
+
+batch.innerHTML = "";
+
+const pilih =
+document.createElement("option");
+
+pilih.value = "";
+pilih.textContent = "Pilih Batch";
+
+batch.appendChild(pilih);
+
+const today = new Date();
+
+if(today <= earlybirdEnd){
+
+const eb =
+document.createElement("option");
+
+eb.value = "Earlybird";
+eb.textContent = "Earlybird";
+
+batch.appendChild(eb);
+
+}
+
+const regular =
+document.createElement("option");
+
+regular.value = "Regular";
+regular.textContent = "Regular";
+
+batch.appendChild(regular);
+
+}
+
+generateBatch();
+
+// ======================================
+// AUTO TANGGAL LAHIR DARI NIK
+// ======================================
+
+nikInput.addEventListener("input", function(){
+
+const nik = this.value;
+
+if(nik.length === 16){
+
+let tanggal =
+parseInt(nik.substring(6,8));
+
+let bulan =
+parseInt(nik.substring(8,10));
+
+let tahun =
+parseInt(nik.substring(10,12));
+
+if(tanggal > 40){
+tanggal -= 40;
+}
+
+const tahunSekarang =
+new Date().getFullYear() % 100;
+
+if(tahun <= tahunSekarang){
+tahun = 2000 + tahun;
+}else{
+tahun = 1900 + tahun;
+}
+
+// validasi sederhana
+if(
+tanggal >= 1 &&
+tanggal <= 31 &&
+bulan >= 1 &&
+bulan <= 12
+){
+
+const formatTanggal =
+`${tahun}-${String(bulan).padStart(2,"0")}-${String(tanggal).padStart(2,"0")}`;
+
+tanggalLahirInput.value =
+formatTanggal;
+
+}
+
+}
+
+});
+
+// ======================================
+// SHOW HIDE KOMUNITAS
+// ======================================
+
+komunitas.addEventListener("change", function(){
+
+const namaKomunitas =
+document.getElementById("namaKomunitas");
+
+if(this.value === "Komunitas"){
+
+komunitasBox.classList.remove("hidden");
+
+namaKomunitas.required = true;
+
+}else{
+
+komunitasBox.classList.add("hidden");
+
+namaKomunitas.required = false;
+
+namaKomunitas.value = "";
+
+}
+
+});
+
+// ======================================
+// UPDATE HARGA
+// ======================================
+
+function updateHarga(){
+
+let nilai = "";
+
+if(
+kategori.value === "3K" &&
+batch.value === "Earlybird"
+){
+nilai = "75000";
+}
+
+if(
+kategori.value === "3K" &&
+batch.value === "Regular"
+){
+nilai = "100000";
+}
+
+if(
+kategori.value === "5K" &&
+batch.value === "Earlybird"
+){
+nilai = "125000";
+}
+
+if(
+kategori.value === "5K" &&
+batch.value === "Regular"
+){
+nilai = "150000";
+}
+
+harga.value = nilai;
+
+}
+
+kategori.addEventListener("change", updateHarga);
+
+batch.addEventListener("change", updateHarga);
+
+// ======================================
+// SUBMIT FORM
+// ======================================
+
+document
+.getElementById("registerForm")
+.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+document.getElementById("loading")
+.style.display = "block";
+
+submitBtn.disabled = true;
+
+const form = e.target;
+
+// ======================================
+// DATA
+// ======================================
+
+const data = {
+
+namaLengkap : form.namaLengkap.value,
+nik : form.nik.value,
+namaBib : form.namaBib.value,
+tanggalLahir : form.tanggalLahir.value,
+jenisKelamin : form.jenisKelamin.value,
+wa : form.wa.value,
+email : form.email.value,
+kota : form.kota.value,
+kategori : form.kategori.value,
+batch : form.batch.value,
+harga : form.harga.value,
+jersey : form.jersey.value,
+komunitas : form.komunitas.value,
+namaKomunitas : form.namaKomunitas.value,
+goldar : form.goldar.value,
+riwayat : form.riwayat.value,
+kontakDarurat : form.kontakDarurat.value,
+metodeBayar : form.metodeBayar.value
+
+};
+
+try{
+
+const response = await fetch(WEBAPP_URL,{
+
+method : "POST",
+
+headers : {
+"Content-Type" : "text/plain;charset=utf-8"
+},
+
+body : JSON.stringify(data)
+
+});
+
+const res = await response.json();
+
+document.getElementById("loading")
+.style.display = "none";
+
+submitBtn.disabled = false;
+
+// ======================================
+// SUCCESS
+// ======================================
+
+if(res.status === "success"){
+
+document.getElementById("successBox")
+.style.display = "block";
+
+// ======================================
+// FORMAT NOMOR WA
+// ======================================
+
+let nomorWA = form.wa.value.trim();
+
+nomorWA = nomorWA.replace(/\D/g,'');
+
+if(nomorWA.startsWith("0")){
+nomorWA = "62" + nomorWA.substring(1);
+}
+
+// ======================================
+// PESAN WHATSAPP
+// ======================================
+
+const pesanWA = encodeURIComponent(
+
+`✅ REGISTRASI BERHASIL
+
+RUN FOR YOUR LIFE 2026
+
+Register ID : ${res.registerId}
+BIB : ${res.bib}
+Total Pembayaran : Rp ${res.harga}
+
+💳 PEMBAYARAN
+Bank Jatim
+0162123456
+
+Silakan lakukan pembayaran lalu upload bukti transfer.
+
+Terima kasih 🙏`
+
+);
+
+// ======================================
+// LINK WA
+// ======================================
+
+const waLink =
+`https://wa.me/${nomorWA}?text=${pesanWA}`;
+
+// ======================================
+// LINK KONFIRMASI
+// ======================================
+
+const konfirmasiLink =
+"https://forms.gle/ISI_LINK_KONFIRMASI_KAMU";
+
+// ======================================
+// TAMPILKAN SUCCESS
+// ======================================
+
+document.getElementById("successText")
+.innerHTML = `
+
+<div style="
+background:#0b1f3d;
+padding:22px;
+border-radius:18px;
+line-height:1.9;
+">
+
+✅ <b>REGISTRASI BERHASIL</b><br><br>
+
+<b>Register ID :</b>
+${res.registerId}<br>
+
+<b>BIB :</b>
+${res.bib}<br>
+
+<b>Total Pembayaran :</b>
+Rp ${res.harga}<br><br>
+
+<hr style="
+border:none;
+border-top:1px solid rgba(255,255,255,0.15);
+margin:18px 0;
+">
+
+💳 <b>INFORMASI PEMBAYARAN</b><br><br>
+
+Bank Jatim<br>
+0162123456<br><br>
+
+Silakan lakukan pembayaran
+dan simpan bukti transfer.
+
+</div>
+
+<div style="margin-top:20px;">
+
+<a
+href="${waLink}"
+target="_blank"
+style="
+display:block;
+text-decoration:none;
+background:#25D366;
+color:white;
+padding:16px;
+border-radius:14px;
+text-align:center;
+font-weight:700;
+margin-bottom:12px;
+">
+
+📩 Kirim Detail Registrasi ke WhatsApp Saya
+
+</a>
+
+<a
+href="${konfirmasiLink}"
+target="_blank"
+style="
+display:block;
+text-decoration:none;
+background:#f6c453;
+color:#06152d;
+padding:16px;
+border-radius:14px;
+text-align:center;
+font-weight:700;
+">
+
+📤 Konfirmasi Pembayaran
+
+</a>
+
+</div>
+
+`;
+
+form.reset();
+
+harga.value = "";
+
+komunitasBox.classList.add("hidden");
+
+window.scrollTo({
+
+top : document.body.scrollHeight,
+behavior : "smooth"
+
+});
+
+}else{
+
+alert("SERVER ERROR : " + res.message);
+
+console.log(res);
+
+}
+
+}catch(err){
+
+document.getElementById("loading")
+.style.display = "none";
+
+submitBtn.disabled = false;
+
+alert("ERROR : " + err.message);
+
+console.log(err);
+
+}
+
+});
+
+</script>
+</body>
+</html>
