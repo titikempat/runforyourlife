@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -166,13 +168,44 @@ button:disabled{
 }
 
 .hidden{
-    display:none;
+    display:none !important;
 }
 
 .note{
     margin-top:10px;
     font-size:13px;
     color:#f6c453;
+}
+
+.quota-box{
+    background:#132f5e;
+    padding:18px;
+    border-radius:18px;
+    margin-bottom:25px;
+    line-height:1.8;
+}
+
+.quota-item{
+    margin-bottom:10px;
+}
+
+.badge{
+    display:inline-block;
+    padding:5px 12px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    margin-left:8px;
+}
+
+.badge-open{
+    background:#1d6b3f;
+    color:#9dffbe;
+}
+
+.badge-close{
+    background:#6b1d1d;
+    color:#ffb1b1;
 }
 
 @media(max-width:768px){
@@ -195,6 +228,435 @@ button:disabled{
 
 }
 
+/* =========================================
+RESPONSIVE EXTRA
+========================================= */
+
+/* Desktop besar */
+@media (min-width:1400px){
+
+.container{
+    max-width:1200px;
+}
+
+.banner{
+    height:420px;
+}
+
+.banner-content h1{
+    font-size:64px;
+}
+
+.banner-content p{
+    font-size:22px;
+}
+
+}
+
+/* Laptop */
+@media (max-width:1024px){
+
+.container{
+    max-width:95%;
+}
+
+.banner{
+    height:300px;
+}
+
+.banner-content{
+    left:25px;
+    bottom:25px;
+}
+
+.banner-content h1{
+    font-size:44px;
+}
+
+.form-section{
+    padding:25px;
+}
+
+}
+
+/* Tablet */
+@media (max-width:768px){
+
+body{
+    padding:12px;
+}
+
+.container{
+    border-radius:18px;
+}
+
+.grid{
+    grid-template-columns:1fr;
+    gap:16px;
+}
+
+.full{
+    grid-column:auto;
+}
+
+.banner{
+    height:240px;
+}
+
+.banner-content{
+    left:20px;
+    bottom:20px;
+}
+
+.banner-content h1{
+    font-size:34px;
+    line-height:1.1;
+}
+
+.banner-content p{
+    font-size:15px;
+}
+
+.form-section{
+    padding:20px;
+}
+
+.section-title{
+    font-size:22px;
+}
+
+.info-box,
+.quota-box{
+    padding:18px;
+    font-size:14px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+    font-size:14px;
+    padding:13px;
+}
+
+button{
+    font-size:16px;
+    padding:15px;
+}
+
+}
+
+/* HP */
+@media (max-width:480px){
+
+body{
+    padding:8px;
+}
+
+.container{
+    border-radius:14px;
+}
+
+.banner{
+    height:210px;
+}
+
+.banner-content{
+    left:15px;
+    bottom:15px;
+}
+
+.banner-content h1{
+    font-size:26px;
+}
+
+.banner-content p{
+    font-size:13px;
+}
+
+.form-section{
+    padding:15px;
+}
+
+.section-title{
+    font-size:19px;
+    margin-bottom:18px;
+}
+
+.info-box,
+.quota-box{
+    padding:15px;
+    border-radius:14px;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.input-group label{
+    font-size:14px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+    padding:12px;
+    font-size:13px;
+    border-radius:12px;
+}
+
+button{
+    padding:14px;
+    font-size:15px;
+    border-radius:12px;
+}
+
+.badge{
+    margin-top:5px;
+    display:inline-block;
+}
+
+.success{
+    padding:18px;
+}
+
+}
+
+/* HP sangat kecil */
+@media (max-width:360px){
+
+.banner-content h1{
+    font-size:22px;
+}
+
+.banner-content p{
+    font-size:12px;
+}
+
+.section-title{
+    font-size:17px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+    font-size:12px;
+}
+
+button{
+    font-size:14px;
+}
+
+}
+
+/* INFO FLEX */
+.info-flex{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+@media (max-width:768px){
+
+.info-flex{
+    grid-template-columns:1fr;
+}
+
+}
+
+/* =========================================
+COUNTDOWN
+========================================= */
+
+.countdown-box{
+    background:#132f5e;
+    padding:22px;
+    border-radius:18px;
+    margin-bottom:25px;
+    text-align:center;
+}
+
+.countdown-title{
+    color:#f6c453;
+    font-weight:700;
+    margin-bottom:18px;
+    font-size:18px;
+    letter-spacing:1px;
+}
+
+.countdown-wrapper{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.countdown-item{
+    background:#0d2347;
+    min-width:90px;
+    padding:16px 10px;
+    border-radius:16px;
+    box-shadow:0 0 15px rgba(0,0,0,0.25);
+}
+
+.countdown-item span{
+    display:block;
+    font-size:34px;
+    font-weight:700;
+    color:#f6c453;
+    line-height:1;
+}
+
+.countdown-item small{
+    font-size:13px;
+    color:#ccc;
+}
+
+.countdown-ended{
+    background:#6b1d1d;
+    color:#ffb1b1;
+    padding:16px;
+    border-radius:14px;
+    font-weight:700;
+}
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+.countdown-item{
+    min-width:70px;
+    padding:14px 8px;
+}
+
+.countdown-item span{
+    font-size:26px;
+}
+
+.countdown-title{
+    font-size:15px;
+}
+
+}
+
+/* =========================================
+TERMS MODAL
+========================================= */
+
+.agreement-label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.terms-link{
+    color:#f6c453;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.terms-link:hover{
+    opacity:0.8;
+}
+
+.terms-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    padding:20px;
+}
+
+.terms-content{
+    width:100%;
+    max-width:650px;
+    background:#0d2347;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 0 40px rgba(0,0,0,0.5);
+    animation:modalFade 0.3s ease;
+}
+
+.terms-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px;
+    background:#132f5e;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.terms-header h2{
+    color:#f6c453;
+    font-size:22px;
+}
+
+.terms-header button{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:12px;
+    background:#f6c453;
+    color:#06152d;
+    font-size:18px;
+    cursor:pointer;
+    padding:0;
+}
+
+.terms-body{
+    padding:25px;
+    max-height:70vh;
+    overflow-y:auto;
+    line-height:1.9;
+    color:#ddd;
+}
+
+.terms-body p{
+    margin-bottom:14px;
+}
+
+@keyframes modalFade{
+
+from{
+    opacity:0;
+    transform:translateY(20px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+.terms-content{
+    border-radius:18px;
+}
+
+.terms-header{
+    padding:18px;
+}
+
+.terms-header h2{
+    font-size:18px;
+}
+
+.terms-body{
+    padding:18px;
+    font-size:14px;
+}
+
+}
+
+option[value="Komunitas"]{
+display:none;
+}
 </style>
 
 </head>
@@ -214,12 +676,99 @@ button:disabled{
 
 <div class="form-section">
 
-<div class="info-box">
+<div class="info-box info-flex">
 
-📍 Taman Bahari Mojopahit Kota Mojokerto<br>
-📅 27 September 2026<br>
-⏰ Start 06.00 WIB<br>
-🏃 Kategori 3K & 5K
+<div>
+
+📍 Taman Bahari Mojopahit – Kota Mojokerto<br>
+📅 27 September 2026<br><br>
+
+⏰ Open Gate : 05.00 WIB<br>
+🔥 Warm Up : 05.30 WIB<br><br>
+
+🚩 Flag Off 5K : 06.00 WIB<br>
+🚩 Flag Off 3K : 06.10 WIB<br><br>
+
+🏃 Kategori : 3K Fun Run & 5K Race
+
+</div>
+
+<div>
+
+🎁 Benefit Peserta :<br>
+• Jersey Exclusive<br>
+• BIB Number<br>
+• Finisher Medal<br>
+• Refreshment<br><br>
+
+🎟 Limited Slot Available<br>
+📲 Daftar Sekarang & Jadilah Bagian Dari #RunForYourLife2026
+
+</div>
+
+</div>
+
+
+<!-- COUNTDOWN -->
+
+<div class="countdown-box">
+
+<div class="countdown-title">
+⏳ SEE YOU ON RACE DAY
+</div>
+
+<div class="countdown-wrapper">
+
+<div class="countdown-item">
+<span id="days">00</span>
+<small>Hari</small>
+</div>
+
+<div class="countdown-item">
+<span id="hours">00</span>
+<small>Jam</small>
+</div>
+
+<div class="countdown-item">
+<span id="minutes">00</span>
+<small>Menit</small>
+</div>
+
+<div class="countdown-item">
+<span id="seconds">00</span>
+<small>Detik</small>
+</div>
+
+</div>
+
+<div
+id="countdownEnded"
+class="countdown-ended hidden"
+>
+
+🚫 PENDAFTARAN SUDAH DITUTUP
+
+</div>
+
+</div>
+<!-- QUOTA INFO -->
+
+<div class="quota-box">
+
+<div class="quota-item">
+🎟️ Earlybird :
+<span id="earlybirdInfo">Loading...</span>
+</div>
+
+<div class="quota-item">
+🏃 Kuota 3K :
+<span id="kuota3kInfo">Loading...</span>
+</div>
+
+<div class="quota-item">
+🏃 Kuota 5K :
+<span id="kuota5kInfo">Loading...</span>
+</div>
 
 </div>
 
@@ -250,6 +799,15 @@ maxlength="16"
 pattern="[0-9]{16}"
 placeholder="16 digit NIK"
 required>
+
+<div
+id="nikStatus"
+style="
+margin-top:8px;
+font-size:13px;
+font-weight:600;
+">
+</div>
 </div>
 
 <!-- NAMA BIB -->
@@ -324,16 +882,25 @@ required>
 
 </select>
 
+<div class="note" id="note3k">
+Pilih salah satu 3K atau 5K
+</div>
+
 </div>
 
 <!-- BATCH -->
-<div class="input-group">
+<div class="input-group" id="batchContainer">
 
 <label>Batch</label>
 
 <select name="batch" id="batch" required>
 <option value="">Pilih Batch</option>
 </select>
+
+<div class="note" id="earlybirdNote">
+Kuota Earlybird terbatas, gass daftar sekarang!!!
+</div>
+
 </div>
 
 <!-- HARGA -->
@@ -357,11 +924,12 @@ readonly>
 <select name="jersey" required>
 
 <option value="">Pilih</option>
+<option value="XS">XS</option>
 <option value="S">S</option>
 <option value="M">M</option>
 <option value="L">L</option>
 <option value="XL">XL</option>
-
+<option value="XXL">XXL</option>
 </select>
 
 </div>
@@ -419,7 +987,9 @@ id="namaKomunitas">
 
 <input
 type="text"
-name="kontakDarurat">
+name="kontakDarurat"
+placeholder="08xxxxxxxxxx"
+required>
 
 </div>
 
@@ -430,7 +1000,9 @@ name="kontakDarurat">
 
 <textarea
 rows="4"
-name="riwayat"></textarea>
+name="riwayat"
+placeholder="Kosongkan jika tidak ada riwayat penyakit"
+></textarea>
 
 </div>
 
@@ -443,7 +1015,6 @@ name="riwayat"></textarea>
 
 <option value="">Pilih</option>
 <option value="Transfer Bank">Transfer Bank</option>
-<option value="QRIS">QRIS</option>
 
 </select>
 
@@ -452,15 +1023,20 @@ name="riwayat"></textarea>
 <!-- AGREEMENT -->
 <div class="input-group full">
 
-<label>
+<label class="agreement-label">
 
 <input type="checkbox" required>
 
-Saya menyetujui syarat dan ketentuan event
+Saya menyetujui
+
+<span id="openTerms" class="terms-link">
+Syarat & Ketentuan Event
+</span>
 
 </label>
 
 </div>
+
 
 <!-- BUTTON -->
 <div class="full">
@@ -480,6 +1056,70 @@ DAFTAR SEKARANG
 ⏳ Sedang mengirim data...
 </div>
 
+<!-- TERMS MODAL -->
+
+<div
+id="termsModal"
+class="terms-modal hidden"
+>
+
+<div class="terms-content">
+
+<div class="terms-header">
+
+<h2>
+SYARAT & KETENTUAN
+</h2>
+
+<button id="closeTerms">
+✕
+</button>
+
+</div>
+
+<div class="terms-body">
+
+<p>
+1. Tiket yang sudah dibeli tidak dapat direfund.
+</p>
+
+<p>
+2. Peserta wajib menjaga kesehatan selama event berlangsung.
+</p>
+
+<p>
+3. Jersey sesuai ukuran yang dipilih saat registrasi.
+</p>
+
+<p>
+4. Panitia tidak bertanggung jawab atas kehilangan barang pribadi.
+</p>
+
+<p>
+5. Peserta wajib mengikuti aturan panitia dan marshal.
+</p>
+
+<p>
+6. Data registrasi wajib diisi dengan benar.
+</p>
+
+<p>
+7. Peserta wajib hadir atau datang sendiri saat pengambilan Race Pack Colection.
+</p>
+
+<p>
+8. Peserta wajib mengikuti pemeriksaan kesehatan saat pengambilan RPC.
+</p>
+
+<p>
+9. Panitia dapat melakukan perubahan teknis sewaktu-waktu.
+</p>
+
+</div>
+
+</div>
+
+</div>
 <!-- SUCCESS -->
 <div class="success" id="successBox">
 
@@ -520,8 +1160,23 @@ document.getElementById("submitBtn");
 const nikInput =
 document.getElementById("nik");
 
+const nikStatus =
+document.getElementById("nikStatus");
+
 const tanggalLahirInput =
 document.getElementById("tanggalLahir");
+
+const batchContainer =
+document.getElementById("batchContainer");
+
+const earlybirdInfo =
+document.getElementById("earlybirdInfo");
+
+const kuota3kInfo =
+document.getElementById("kuota3kInfo");
+
+const kuota5kInfo =
+document.getElementById("kuota5kInfo");
 
 // ======================================
 // URL WEB APP
@@ -538,8 +1193,184 @@ const earlybirdEnd =
 new Date("2026-07-31");
 
 // ======================================
-// GENERATE BATCH
+// STATE
 // ======================================
+
+let earlybirdFull = false;
+let kuota3kFull = false;
+
+let nikValid = false;
+
+nikInput.addEventListener(
+"blur",
+async function(){
+
+  const nik = this.value.trim();
+
+  nikStatus.innerHTML = "";
+  nikValid = false;
+
+  if(nik.length !== 16){
+    return;
+  }
+
+  try{
+
+    const response =
+      await fetch(
+        `${WEBAPP_URL}?action=cekNik&nik=${nik}`
+      );
+
+    const res =
+      await response.json();
+
+if(res.exists){
+
+  nikStatus.innerHTML =
+  "❌ NIK sudah terdaftar pada sistem.<br>Silakan gunakan NIK yang berbeda atau hubungi admin.";
+
+  nikStatus.style.color =
+  "#ff6b6b";
+
+  nikValid = false;
+
+  submitBtn.disabled = true;
+
+}else{
+
+      nikStatus.innerHTML =
+      "✅ NIK tersedia, silahkan lanjutkan pendaftaran";
+
+      nikStatus.style.color =
+      "#6effa7";
+
+      nikValid = true;
+
+      submitBtn.disabled = false;
+
+    }
+
+  }catch(err){
+
+    console.log(err);
+
+  }
+
+});
+
+generateBatch();
+
+// ======================================
+// LOAD KUOTA
+// ======================================
+
+async function loadKuota(){
+
+try{
+
+const response =
+await fetch(
+`${WEBAPP_URL}?action=cekKuota`
+);
+
+const res =
+await response.json();
+
+if(res.status === "success"){
+
+// ==================================
+// EARLYBIRD
+// ==================================
+
+earlybirdFull =
+res.earlybird.full;
+
+earlybirdInfo.innerHTML = `
+
+<span class="
+badge
+${res.earlybird.full
+? "badge-close"
+: "badge-open"}
+">
+
+${res.earlybird.full
+? "FULL"
+: "TERSEDIA"}
+
+</span>
+
+`;
+
+// ==================================
+// 3K
+// ==================================
+
+kuota3kFull =
+res.kategori3K.full;
+
+kuota3kInfo.innerHTML = `
+
+<span class="
+badge
+${res.kategori3K.full
+? "badge-close"
+: "badge-open"}
+">
+
+${res.kategori3K.full
+? "FULL"
+: "TERSEDIA"}
+
+</span>
+
+`;
+
+// ==================================
+// 5K
+// ==================================
+
+kuota5kInfo.innerHTML = `
+
+<span class="
+badge
+${res.kategori5K.full
+? "badge-close"
+: "badge-open"}
+">
+
+${res.kategori5K.full
+? "FULL"
+: "TERSEDIA"}
+
+</span>
+
+`;
+
+// ==================================
+// UPDATE BATCH
+// ==================================
+
+generateBatch();
+
+}
+
+}catch(err){
+
+console.log(err);
+
+}
+
+}
+
+async function initKuota(){
+
+await loadKuota();
+
+
+}
+
+initKuota();
 
 function generateBatch(){
 
@@ -555,7 +1386,14 @@ batch.appendChild(pilih);
 
 const today = new Date();
 
-if(today <= earlybirdEnd){
+// ==================================
+// EARLYBIRD
+// ==================================
+
+if(
+today <= earlybirdEnd &&
+!earlybirdFull
+){
 
 const eb =
 document.createElement("option");
@@ -567,17 +1405,112 @@ batch.appendChild(eb);
 
 }
 
-const regular =
-document.createElement("option");
+// ==================================
+// REGULAR
+// ==================================
 
-regular.value = "Regular";
-regular.textContent = "Regular";
+// const regular =
+// document.createElement("option");
 
-batch.appendChild(regular);
+// regular.value = "Regular";
+// regular.textContent = "Regular";
+
+// batch.appendChild(regular);
 
 }
 
-generateBatch();
+// ======================================
+// COUNTDOWN PENDAFTARAN
+// ======================================
+
+const countdownDate =
+new Date("2026-09-25T23:59:59").getTime();
+
+const countdownInterval =
+setInterval(function(){
+
+const now =
+new Date().getTime();
+
+const distance =
+countdownDate - now;
+
+// ==================================
+// SUDAH DITUTUP
+// ==================================
+
+if(distance < 0){
+
+clearInterval(countdownInterval);
+
+document
+.getElementById("countdownEnded")
+.classList.remove("hidden");
+
+document
+.querySelector(".countdown-wrapper")
+.style.display = "none";
+
+submitBtn.disabled = true;
+
+submitBtn.innerText =
+"PENDAFTARAN DITUTUP";
+
+return;
+
+}
+
+// ==================================
+// HITUNG WAKTU
+// ==================================
+
+const days =
+Math.floor(
+distance / (1000 * 60 * 60 * 24)
+);
+
+const hours =
+Math.floor(
+(distance % (1000 * 60 * 60 * 24))
+/
+(1000 * 60 * 60)
+);
+
+const minutes =
+Math.floor(
+(distance % (1000 * 60 * 60))
+/
+(1000 * 60)
+);
+
+const seconds =
+Math.floor(
+(distance % (1000 * 60))
+/
+1000
+);
+
+// ==================================
+// TAMPILKAN
+// ==================================
+
+document.getElementById("days")
+.innerText =
+String(days).padStart(2,"0");
+
+document.getElementById("hours")
+.innerText =
+String(hours).padStart(2,"0");
+
+document.getElementById("minutes")
+.innerText =
+String(minutes).padStart(2,"0");
+
+document.getElementById("seconds")
+.innerText =
+String(seconds).padStart(2,"0");
+
+},1000);
 
 // ======================================
 // AUTO TANGGAL LAHIR DARI NIK
@@ -611,7 +1544,6 @@ tahun = 2000 + tahun;
 tahun = 1900 + tahun;
 }
 
-// validasi sederhana
 if(
 tanggal >= 1 &&
 tanggal <= 31 &&
@@ -659,6 +1591,37 @@ namaKomunitas.value = "";
 });
 
 // ======================================
+// VALIDASI 3K
+// ======================================
+
+kategori.addEventListener("change", function(){
+
+// ==================================
+// JIKA 3K FULL
+// ==================================
+
+if(
+this.value === "3K" &&
+kuota3kFull
+){
+
+alert(
+"Kuota kategori 3K sudah penuh"
+);
+
+this.value = "";
+
+harga.value = "";
+
+return;
+
+}
+
+updateHarga();
+
+});
+
+// ======================================
 // UPDATE HARGA
 // ======================================
 
@@ -698,9 +1661,10 @@ harga.value = nilai;
 
 }
 
-kategori.addEventListener("change", updateHarga);
-
-batch.addEventListener("change", updateHarga);
+batch.addEventListener(
+"change",
+updateHarga
+);
 
 // ======================================
 // SUBMIT FORM
@@ -712,12 +1676,42 @@ document
 
 e.preventDefault();
 
+if(!nikValid){
+
+  alert(
+    "Silakan gunakan NIK yang belum terdaftar."
+  );
+
+  return;
+
+}
+
 document.getElementById("loading")
 .style.display = "block";
 
 submitBtn.disabled = true;
 
 const form = e.target;
+
+// ======================================
+// VALIDASI 3K FULL
+// ======================================
+
+if(
+form.kategori.value === "3K" &&
+kuota3kFull
+){
+
+document.getElementById("loading")
+.style.display = "none";
+
+submitBtn.disabled = false;
+
+alert("Kuota kategori 3K sudah penuh");
+
+return;
+
+}
 
 // ======================================
 // DATA
@@ -776,20 +1770,59 @@ if(res.status === "success"){
 document.getElementById("successBox")
 .style.display = "block";
 
+
+
 // ======================================
 // FORMAT NOMOR WA
 // ======================================
 
-let nomorWA = form.wa.value.trim();
+let nomorWA =
+form.wa.value.trim();
 
-nomorWA = nomorWA.replace(/\D/g,'');
+nomorWA =
+nomorWA.replace(/\D/g,'');
 
 if(nomorWA.startsWith("0")){
-nomorWA = "62" + nomorWA.substring(1);
+nomorWA =
+"62" +
+nomorWA.substring(1);
 }
 
 // ======================================
-// PESAN WHATSAPP
+// LINK ADMIN WA
+// ======================================
+
+const adminMessage = encodeURIComponent(
+
+`Halo Admin RUN FOR YOUR LIFE 2026,
+
+Mohon cek pembayaran kami :
+
+Jenis Pendaftar : ${res.jenisPendaftar}
+Nama Lengkap Pendaftar : ${res.namaLengkap}
+Register ID : ${res.registerId}
+No BIB : ${res.bib}
+Kategori Lari : ${res.kategori}
+Total Pembayaran : Rp ${res.harga}
+Nama Rekening Pengirim :
+Bank Transfer :
+
+*WAJIB menyertakan bukti transfer.*
+
+Note :
+- Cek Status Peserta
+https://run4yourlife.github.io/cekstatus-peserta/
+
+Sampai jumpa di garis start Run For Your Life 2026
+Terimakasih.`
+
+);
+
+const adminWA =
+`https://wa.me/6285124946846?text=${adminMessage}`;
+
+// ======================================
+// PESAN WA PESERTA
 // ======================================
 
 const pesanWA = encodeURIComponent(
@@ -798,37 +1831,57 @@ const pesanWA = encodeURIComponent(
 
 RUN FOR YOUR LIFE 2026
 
-Register ID : ${res.registerId}
-BIB : ${res.bib}
-Total Pembayaran : Rp ${res.harga}
+🆔 Register ID (Tap & Copy)
+\`${res.registerId}\`
+
+🎽 BIB Number (Tap & Copy)
+\`${res.bib}\`
+
+💰 Total Pembayaran
+Rp ${res.harga}
 
 💳 PEMBAYARAN
-Bank Jatim
-0162123456
+Bank Mandiri
 
-Silakan lakukan pembayaran lalu upload bukti transfer melalui link dibawah.
-https://forms.gle/DgjCQF4w8h9rYBLq7
+🏦 No. Rekening (Tap & Copy)
+\`1420007809360\`
+
+👤 Atas Nama
+DIAN KRISTININGTYAS
+
+📌 Silakan lakukan pembayaran sesuai nominal yang tertera.
+
+⚠️ PENTING
+Jangan lupa untuk mengedit pesan konfirmasi dengan melengkapi:
+• Nama Pemilik Rekening Pengirim
+• Bank Asal Transfer
+• Tulis nama Peserta dicatatan transfer
+
+
+Serta wajib melampirkan bukti transfer sebelum mengirim pesan kepada admin
+
+• KONFIRMASI PEMBAYARAN DITUNGGU PALING LAMBAT 30 MENIT SETELAH DATA TERSIMPAN
+• ADMIN AKAN MELAKUKAN FOLLOW UP JIKA DIRASA PERLU.
 
 Terima kasih 🙏`
 
 );
 
 // ======================================
-// LINK WA
+// LINK WA PESERTA
 // ======================================
 
 const waLink =
 `https://wa.me/${nomorWA}?text=${pesanWA}`;
 
 // ======================================
-// LINK KONFIRMASI
+// BUTTON KIRIM BUKTI PEMBAYARAN
 // ======================================
 
-const konfirmasiLink =
-"https://forms.gle/DgjCQF4w8h9rYBLq7";
+const konfirmasiLink = adminWA;
 
 // ======================================
-// TAMPILKAN SUCCESS
+// SUCCESS HTML
 // ======================================
 
 document.getElementById("successText")
@@ -860,35 +1913,26 @@ margin:18px 0;
 
 💳 <b>INFORMASI PEMBAYARAN</b><br><br>
 
-Bank Jatim<br>
-0162123456<br><br>
+Bank Mandiri<br>
+1420007809360<br>
 
+👤 Atas Nama<br>
+DIAN KRISTININGTYAS<br><br>
+
+⚠️ PENTING
+Jangan lupa untuk mengedit pesan konfirmasi dengan melengkapi:<br>
+• Nama Pemilik Rekening Pengirim<br>
+• Bank Asal Transfer<br>
+• Tulis nama Peserta dicatatan transfer<br>
+• Serta wajib melampirkan bukti transfer sebelum mengirim pesan kepada admin<br><br>
+• KONFIRMASI PEMBAYARAN DITUNGGU PALING LAMBAT 30 MENIT SETELAH DATA TERSIMPAN<br>
+• ADMIN AKAN MELAKUKAN FOLLOW UP JIKA DIRASA PERLU.<br><br>
+
+Terima kasih 🙏<br>
 Silakan lakukan pembayaran
-dan simpan bukti transfer.
+dan simpan bukti transfer
 
 </div>
-
-<div style="margin-top:20px;">
-
-<a
-href="${waLink}"
-target="_blank"
-style="
-display:block;
-text-decoration:none;
-background:#25D366;
-color:white;
-padding:16px;
-border-radius:14px;
-text-align:center;
-font-weight:700;
-margin-bottom:12px;
-">
-
-📩 Kirim Detail Registrasi ke WhatsApp Saya
-
-</a>
-
 <a
 href="${konfirmasiLink}"
 target="_blank"
@@ -903,7 +1947,7 @@ text-align:center;
 font-weight:700;
 ">
 
-📤 Konfirmasi Pembayaran
+📤 KIRIM BUKTI PEMBAYARAN KE WA ADMIN
 
 </a>
 
@@ -917,6 +1961,16 @@ harga.value = "";
 
 komunitasBox.classList.add("hidden");
 
+nikValid = false;
+nikStatus.innerHTML = "";
+submitBtn.disabled = false;
+
+// ======================================
+// REFRESH KUOTA
+// ======================================
+
+loadKuota();
+
 window.scrollTo({
 
 top : document.body.scrollHeight,
@@ -924,9 +1978,64 @@ behavior : "smooth"
 
 });
 
-}else{
+}
 
-alert("SERVER ERROR : " + res.message);
+// ======================================
+// FULL EARLYBIRD
+// ======================================
+
+else if(
+res.status === "full_earlybird"
+){
+
+alert(
+"Kuota Earlybird sudah penuh"
+);
+
+loadKuota();
+
+}
+
+// ======================================
+// FULL 3K
+// ======================================
+
+else if(
+res.status === "full_3k"
+){
+
+alert(
+"Kuota kategori 3K sudah penuh"
+);
+
+loadKuota();
+
+}
+
+// ======================================
+// NIK SUDAH TERDAFTAR
+// ======================================
+
+else if(
+res.status === "nik_exists"
+){
+
+alert(
+"NIK sudah terdaftar pada sistem.\n\nSilakan gunakan NIK yang berbeda atau hubungi admin."
+);
+
+}
+
+// ======================================
+// ERROR
+// ======================================
+
+else{
+
+alert(
+"SERVER ERROR : " +
+res.message
+);
 
 console.log(res);
 
@@ -939,7 +2048,10 @@ document.getElementById("loading")
 
 submitBtn.disabled = false;
 
-alert("ERROR : " + err.message);
+alert(
+"ERROR : " +
+err.message
+);
 
 console.log(err);
 
@@ -947,6 +2059,47 @@ console.log(err);
 
 });
 
+// ======================================
+// TERMS MODAL
+// ======================================
+
+const termsModal =
+document.getElementById("termsModal");
+
+const openTerms =
+document.getElementById("openTerms");
+
+const closeTerms =
+document.getElementById("closeTerms");
+
+// OPEN
+
+openTerms.addEventListener("click", function(){
+
+termsModal.classList.remove("hidden");
+
+});
+
+// CLOSE BUTTON
+
+closeTerms.addEventListener("click", function(){
+
+termsModal.classList.add("hidden");
+
+});
+
+// CLOSE OUTSIDE
+
+termsModal.addEventListener("click", function(e){
+
+if(e.target === termsModal){
+
+termsModal.classList.add("hidden");
+
+}
+
+});
 </script>
+
 </body>
 </html>
