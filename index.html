@@ -657,6 +657,96 @@ to{
 option[value="Komunitas"]{
 display:none;
 }
+
+/* =========================
+LOADING POPUP
+========================= */
+
+.loading-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(4px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+.loading-box{
+    background:#0d2347;
+    padding:35px;
+    border-radius:24px;
+    text-align:center;
+    min-width:280px;
+    box-shadow:0 0 40px rgba(0,0,0,0.5);
+}
+
+.loader{
+    width:70px;
+    height:70px;
+    border:6px solid rgba(255,255,255,0.15);
+    border-top:6px solid #f6c453;
+    border-radius:50%;
+    margin:auto;
+    animation:spin 1s linear infinite;
+}
+
+.loading-text{
+    margin-top:20px;
+    color:#f6c453;
+    font-size:16px;
+    font-weight:600;
+}
+
+@keyframes spin{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+/* =========================
+SUCCESS POPUP
+========================= */
+
+.success-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.8);
+    backdrop-filter:blur(5px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    padding:20px;
+}
+
+.success-content{
+    width:100%;
+    max-width:650px;
+    max-height:90vh;
+    overflow:auto;
+    background:#0d2347;
+    border-radius:24px;
+    padding:30px;
+    animation:modalFade .35s ease;
+}
+
+.success-content h2{
+    color:#6effa7;
+    margin-bottom:15px;
+}
+
+.close-success{
+    margin-top:20px;
+    background:#f6c453;
+    color:#06152d;
+    border:none;
+    padding:14px;
+    border-radius:14px;
+    font-weight:700;
+    width:100%;
+    cursor:pointer;
+}
 </style>
 
 </head>
@@ -1051,9 +1141,20 @@ DAFTAR SEKARANG
 
 </form>
 
-<!-- LOADING -->
-<div class="loading" id="loading">
-⏳ Sedang mengirim data...
+<div
+id="loading"
+class="loading-overlay hidden">
+
+<div class="loading-box">
+
+<div class="loader"></div>
+
+<div class="loading-text">
+Sedang memproses registrasi...
+</div>
+
+</div>
+
 </div>
 
 <!-- TERMS MODAL -->
@@ -1121,13 +1222,25 @@ SYARAT & KETENTUAN
 
 </div>
 <!-- SUCCESS -->
-<div class="success" id="successBox">
+<div
+id="successBox"
+class="success-modal hidden">
+
+<div class="success-content">
 
 <h2>✅ REGISTRASI BERHASIL</h2>
 
 <p id="successText"></p>
 
-</div>
+<button
+class="close-success"
+onclick="
+document
+.getElementById('successBox')
+.classList.add('hidden')
+">
+TUTUP
+</button>
 
 </div>
 
@@ -1686,8 +1799,9 @@ if(!nikValid){
 
 }
 
-document.getElementById("loading")
-.style.display = "block";
+document
+.getElementById("loading")
+.classList.remove("hidden");
 
 submitBtn.disabled = true;
 
@@ -1702,8 +1816,9 @@ form.kategori.value === "3K" &&
 kuota3kFull
 ){
 
-document.getElementById("loading")
-.style.display = "none";
+document
+.getElementById("loading")
+.classList.add("hidden");
 
 submitBtn.disabled = false;
 
@@ -1756,8 +1871,9 @@ body : JSON.stringify(data)
 
 const res = await response.json();
 
-document.getElementById("loading")
-.style.display = "none";
+document
+.getElementById("loading")
+.classList.add("hidden");
 
 submitBtn.disabled = false;
 
@@ -1767,8 +1883,9 @@ submitBtn.disabled = false;
 
 if(res.status === "success"){
 
-document.getElementById("successBox")
-.style.display = "block";
+document
+.getElementById("successBox")
+.classList.remove("hidden");
 
 
 
@@ -1971,12 +2088,6 @@ submitBtn.disabled = false;
 
 loadKuota();
 
-window.scrollTo({
-
-top : document.body.scrollHeight,
-behavior : "smooth"
-
-});
 
 }
 
